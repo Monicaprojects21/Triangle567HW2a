@@ -9,7 +9,7 @@ The primary goal of this file is to demonstrate a simple unittest implementation
 
 import unittest
 
-from Triangle-1 import classifyTriangle
+from Triangle import classifyTriangle
 
 # This code implements the unit test functionality
 # https://docs.python.org/3/library/unittest.html has a nice description of the framework
@@ -27,16 +27,16 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
     
     def testRightTriangleB(self): 
-        self.assertEqual(classifyTriangle(3,3,4),'Right','3,3,4 is a Isosceles triangle')
+        self.assertEqual(classifyTriangle(5,5,3),'Right','5,5,3 is a Isosceles triangle')
         
     def testEquilateralTriangles(self): 
-        self.assertEqual(classifyTriangle(1,-1,1),'Equilateral','1,-1,1 should be equilateral')
+        self.assertEqual(classifyTriangle(15,15,15),'Equilateral','1,-1,1 should be equilateral')
     
-     def testRightTriangleB(self): 
-        self.assertEqual(classifyTriangle(5,3,4),'Right','10,10,5 is a Scalene triangle')
+    def testRightTriangleB(self): 
+        self.assertEqual(classifyTriangle(10,11,12),'Right','10,11,12 is a Scalene triangle')
         
     def testEquilateralTriangles(self): 
-        self.assertEqual(classifyTriangle(1,1,1),'Equilateral','-1,1,-1 should be equilateral')
+        self.assertEqual(classifyTriangle(10,1,10),'Equilateral','10,1,10 should be equilateral')
 
 
 
