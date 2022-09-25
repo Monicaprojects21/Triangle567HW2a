@@ -9,13 +9,10 @@ jobs:
       - image: cimg/python:3.10.2
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-          args: pytest
       - run:
           name: Run Test
           command: |
-            cd cd desktop\ Triangle567HW2a\ Testing\ Legacy\ Problem/
+            pip install pytest
             pytest --junitxml=test-results/report.xml TestTriangle1.py
       - store_test_results:
           path: test-results
